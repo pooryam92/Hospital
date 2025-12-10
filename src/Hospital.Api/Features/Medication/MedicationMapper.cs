@@ -3,9 +3,9 @@ using Hospital.Domain;
 
 namespace Hospital.Features;
 
-public class MedicationMapper : Mapper<MedicationRequest, MedicationResponse , Medication>
+public class MedicationMapper : Mapper<MedicationRequest, MedicationResponse , MedicationItem>
 {
-    public override MedicationResponse FromEntity(Medication e)
+    public override MedicationResponse FromEntity(MedicationItem e)
     {
         return new MedicationResponse(e.Name);
     }

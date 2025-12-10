@@ -13,25 +13,38 @@ public class Seed(HospitalContext context, ILogger<Seed> logger)
 
         logger.LogInformation("Seeding data...");
 
-        var medications = new List<Medication>
+        var medications = new List<MedicationItem>
         {
-            new Medication()
+            new ()
             {
                 Name = "Aspirin"
             },
-            new Medication()
+            new ()
             {
                 Name = "Ibuprofen"
             }
         };
 
+        var records = new List<MedicalRecord>()
+        {
+            new()
+            {
+                RecordName = "uitslag.pdf"
+            },
+            new()
+            {
+                RecordName = "test.zip"
+            }
+        };
+
         var patients = new List<Patient>
         {
-            new Patient()
+            new ()
             {
                 Name = "John",
                 Bsn = 123456789,
-                Medications = medications
+                Medications = medications,
+                MedicalRecords = records
             }
         };
 

@@ -1,6 +1,6 @@
 namespace Hospital.Domain;
 
-public class Medication
+public class MedicationItem
 {
     public Guid Id { get; private set; }
     public required string Name { get; set; }

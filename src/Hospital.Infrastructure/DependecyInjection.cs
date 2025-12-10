@@ -1,7 +1,6 @@
 using Hospital.Application;
 using Hospital.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Hospital.Infrastructure;
