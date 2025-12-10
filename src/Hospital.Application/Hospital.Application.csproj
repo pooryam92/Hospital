@@ -19,4 +19,8 @@
       <ProjectReference Include="..\Hospital.Domain\Hospital.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Patient\Queries\GetPatientReportQueryHandler.cs" />
+    </ItemGroup>
+
 </Project>

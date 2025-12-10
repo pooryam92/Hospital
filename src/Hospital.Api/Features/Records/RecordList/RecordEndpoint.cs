@@ -1,5 +1,4 @@
 using FastEndpoints;
-using Hospital.Application.Medication.Queries;
 using Hospital.Application.Record.Queries;
 using MediatR;
 

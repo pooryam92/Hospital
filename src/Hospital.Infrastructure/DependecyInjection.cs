@@ -1,5 +1,7 @@
 using Hospital.Application;
+using Hospital.Application.Abstractions;
 using Hospital.Infrastructure.Database;
+using Hospital.Infrastructure.FileHandler;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,7 +16,8 @@ public static class DependecyInjection
                 options.UseInMemoryDatabase("HospitalDB");
             }
         );
-        services.AddScoped<IHospitalContext>(provider => provider.GetRequiredService<HospitalContext>()); 
+        services.AddScoped<IHospitalContext>(provider => provider.GetRequiredService<HospitalContext>());
+        services.AddScoped<IFileHandler, FileHandlerMock>();
         services.AddScoped<Seed.Seed>();
 
         return services;
