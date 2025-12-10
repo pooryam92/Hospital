@@ -3,7 +3,8 @@ using Hospital.Application.Medication.Queries;
 using MediatR;
 
 namespace Hospital.Features;
- public class MedicationEndpoint(ISender sender) : Endpoint<MedicationRequest, List<MedicationResponse>, MedicationMapper>
+
+public class MedicationEndpoint(ISender sender) : Endpoint<MedicationRequest, List<MedicationResponse>, MedicationMapper>
 {
     public override void Configure()
     {
